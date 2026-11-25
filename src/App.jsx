@@ -46,7 +46,7 @@ function App() {
   };
 
   const handleFileUpload = (e) => {
-    const file = e.target.files;
+    const file = e.target.files[0];
     if (!file) return;
 
     stopCamera();
@@ -155,7 +155,17 @@ function App() {
   return (
     <div className="app-container" style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <header className="app-header" style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <h1 className="app-title">⚽ AI サッカー教育・完全版プログラム</h1>
+        <h1
+          className="app-title"
+          style={{
+            fontSize: '24px',
+            lineHeight: '1.4',
+            margin: 0,
+            wordBreak: 'keep-all',
+          }}
+        >
+          ⚽ AI サッカー教育・<wbr />完全版プログラム
+        </h1>
       </header>
 
       <div style={{ marginBottom: '15px' }}>
